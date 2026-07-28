@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FoodBridge NGO portal - view and accept nearby food donations." />
+    <title>NGO Portal | FoodBridge</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="ngo.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="shell navigation" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="FoodBridge home">
+          <span class="brand-mark" aria-hidden="true">&#10047;</span>
+          <span>FoodBridge</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Back to site</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="shell ngo-portal">
+      <section id="login-view" class="login-card">
+        <span class="eyebrow">NGO portal</span>
+        <h1>Log in to view nearby donations</h1>
+        <p class="lead">Use the phone number on file for your NGO.</p>
+        <form id="login-form">
+          <label>Phone number<input name="phone" type="tel" autocomplete="tel" required /></label>
+          <label>Password<input name="password" type="password" autocomplete="current-password" required /></label>
+          <button class="button button-primary" type="submit">Log in</button>
+          <p class="form-status" id="login-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="dashboard-view" class="dashboard" hidden>
+        <div class="dashboard-head">
+          <div>
+            <span class="eyebrow">Welcome back</span>
+            <h1 id="ngo-name">NGO dashboard</h1>
+          </div>
+          <button class="button button-secondary compact" id="logout-button" type="button">Log out</button>
+        </div>
+        <p class="form-status" id="dashboard-status" role="status" aria-live="polite"></p>
+        <div class="donation-list" id="donation-list"></div>
+      </section>
+    </main>
+
+    <template id="donation-card-template">
+      <article class="donation-card">
+        <div class="donation-card-head">
+          <h3 class="donation-food-type"></h3>
+          <span class="donation-status"></span>
+        </div>
+        <p class="donation-servings"></p>
+        <p class="donation-location"></p>
+        <p class="donation-deadline"></p>
+        <p class="donation-notes"></p>
+        <button class="button button-primary compact accept-button" type="button">Accept donation</button>
+      </article>
+    </template>
+
+    <script src="ngo.js"></script>
+  </body>
+</html>

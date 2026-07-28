@@ -1,0 +1,6 @@
+# Uploaded images are generated at runtime; keep the directory itself with uploads/.gitkeep.
+/uploads/*
+!/uploads/.gitkeep
+
+# Optional local configuration overrides with production credentials.
+/api/config.local.php

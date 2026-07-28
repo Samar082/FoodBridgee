@@ -1,0 +1,25 @@
+.ngo-portal { padding: 48px 0 80px; min-height: calc(100vh - 78px); }
+
+.login-card { max-width: 420px; margin: 60px auto; padding: 36px; border: 1px solid var(--line); border-radius: 20px; background: var(--paper); box-shadow: var(--shadow); }
+.login-card h1 { font-size: 1.7rem; margin: 8px 0 4px; }
+.login-card form { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
+.login-card label { display: flex; flex-direction: column; gap: 6px; font-size: .85rem; font-weight: 700; color: var(--muted); }
+.login-card input { min-height: 46px; padding: 0 14px; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink); }
+.login-card input:focus { outline: 2px solid var(--green); outline-offset: 1px; }
+
+.form-status { min-height: 1.2em; font-size: .88rem; font-weight: 650; }
+.form-status.success { color: var(--green-dark); }
+.form-status.error { color: #b23b3b; }
+
+.dashboard-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 8px; }
+.dashboard-head h1 { font-size: 2rem; margin: 4px 0 0; }
+
+.donation-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; margin-top: 24px; }
+.donation-card { display: flex; flex-direction: column; gap: 6px; padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); box-shadow: var(--shadow); }
+.donation-card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.donation-card h3 { font-size: 1.15rem; margin: 0; }
+.donation-status { padding: 3px 10px; border-radius: 999px; background: var(--lime); color: var(--green-dark); font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }
+.donation-card p { margin: 0; color: var(--muted); font-size: .92rem; }
+.donation-notes:empty { display: none; }
+.accept-button { margin-top: 10px; align-self: flex-start; }
+.empty-state { padding: 40px; text-align: center; color: var(--muted); }
